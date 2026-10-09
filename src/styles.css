@@ -1,0 +1,46 @@
+@import "tailwindcss" source("../");
+
+/* Design tokens mirrored from the live Abdulsobbur Anatomy site so the admin
+   console reads as part of the same product. */
+:root {
+  --background: #f8f9fc;
+  --foreground: #272537;
+  --card: #ffffff;
+  --border: #ecebf1;
+  --muted: #f2f1f7;
+  --muted-foreground: #706b7c;
+  --primary: #7953c5;
+  --primary-foreground: #ffffff;
+  --soft-purple: #f1edf9;
+  --positive: #3e927a;
+  --warning: #b7791f;
+  --danger: #c2413b;
+  --heading-font: "Manrope", sans-serif;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-border: var(--border);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-soft-purple: var(--soft-purple);
+  --color-positive: var(--positive);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--heading-font);
+}
+
+body {
+  @apply m-0 bg-background text-foreground font-sans;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--heading-font);
+}
